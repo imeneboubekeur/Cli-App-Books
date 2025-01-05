@@ -50,6 +50,12 @@ struct book tDataStru[4]=
     {"6.4","I Found Peace",350,0}
 };
 struct book cart[10];
+void DisplayEClaculus();
+void DisplayEPhysics();
+void DisplayEDataStru();
+void DisplayTClaculus();
+void DisplayTPhysics();
+void DisplayTDataStru();
 int main()
 {
     int option=0;
@@ -62,4 +68,34 @@ int main()
    
 
 return 0;
+}
+void DisplayEClaculus(){
+    for (int i=0;i<=3;i++){
+        printf("%d- %s--%d \n",i+1,eCalculus[i].title,eCalculus[i].price);
+    }
+}
+void DisplayEPhysics(){
+    for (int i=0;i<=3;i++){
+        printf("%d- %s--%d \n",i+1,ePhysics[i].title,ePhysics[i].price);
+    }
+}
+void DisplayEDataStru(){
+    for (int i=0;i<=3;i++){
+        printf("%d- %s--%d \n",i+1,eDataStru[i].title,eDataStru[i].price);
+    }
+}
+void DisplayTClaculus(){
+    for (int i=0;i<=3;i++){
+        printf("%d- %s--%d \n",i+1,tCalculus[i].title,tCalculus[i].price);
+    }
+}
+void DisplayTPhysics(){
+    for (int i=0;i<=3;i++){
+        printf("%d- %s--%d \n",i+1,tPhysics[i].title,tPhysics[i].price);
+    }
+}
+void DisplayTDataStru(){
+    for (int i=0;i<=3;i++){
+        printf("%d- %s--%d \n",i+1,tDataStru[i].title,tDataStru[i].price);
+    }
 }
