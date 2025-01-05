@@ -58,6 +58,7 @@ void DisplayEDataStru();
 void DisplayTClaculus();
 void DisplayTPhysics();
 void DisplayTDataStru();
+void viewCart();
 void eCalculus1(char *str);
 void ePhysics1(char *str);
 void eDataStru1(char *str);
@@ -302,4 +303,10 @@ if (strcmp(tDataStru[j].id, str)==0){
     break;}
 } else j++;
 }
+}
+void viewCart() {
+    for (int i = 0; i <cartItems ; i++) {
+        printf("-- title: %s, price: %d, quantity:%d\n", cart[i].title, cart[i].price,cart[i].qty);
+    }
+    printf(" \n TOTAL PRICE:%d",totalPrice);
 }
