@@ -89,7 +89,7 @@ int main()
           scanf("%d",&lang);
           switch(lang){
             int cat;
-           case 1: printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures \n");
+           case 1: printf("Chose a Category:\n 1-Calculus \n 2-Physics \n 3-Data Structures \n");
               scanf("%d",&cat);
               switch(cat){
                 case 1:addeCalculus();
@@ -100,7 +100,7 @@ int main()
                 break;
               }
               break;
-            case 2:printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures \n");
+            case 2:printf("Chose a Category:\n 1-Calculus \n 2-Physics \n 3-Data Structures \n");
               scanf("%d",&cat);
               switch(cat){
                 case 1:addtCalculus();
@@ -117,7 +117,7 @@ int main()
         scanf("%d",&lang);
           switch(lang){
             int cat;
-           case 1: printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures \n");
+           case 1: printf("Chose a Category:\n 1-Calculus \n 2-Physics \n 3-Data Structures \n");
               scanf("%d",&cat);
               switch(cat){
                 case 1:DisplayEClaculus();
@@ -128,7 +128,7 @@ int main()
                 break;
               }
               break;
-            case 2:printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures \n");
+            case 2:printf("Chose a Category:\n 1-Calculus \n 2-Physics \n 3-Data Structures \n");
               scanf("%d",&cat);
               switch(cat){
                 case 1:DisplayTClaculus();
