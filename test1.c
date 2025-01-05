@@ -73,7 +73,7 @@ int main()
      scanf("%d",&option);
      switch(option){
          int lang;
-        case 1: printf("Chose a Language:\n 1- TURKISH \n 2-ENGLISH");
+        case 1: printf("Chose a Language:\n 1-ENGLISH \n 2-TURKISH");
         scanf("%d",&lang);
           switch(lang){
             int cat;
