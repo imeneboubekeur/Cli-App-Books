@@ -206,7 +206,6 @@ int j=0;
 int i=0;
 while( (j<ecalc)){
 if ( strcmp(eCalculus[j].id,str)==0 ){
-    printf("%s   %s",str,eCalculus[j].id);
     totalPrice+=eCalculus[j].price;
     while (i<=cartItems){
         if ( strcmp(cart[i].id,str)==0) {
@@ -220,7 +219,6 @@ if ( strcmp(eCalculus[j].id,str)==0 ){
     else
       {
         cart[cartItems]=eCalculus[j];
-        //printf("hey  %s ",cart[cartItems].id);
       cart[cartItems].qty++;
       ++cartItems;
     break;}
