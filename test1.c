@@ -50,12 +50,20 @@ struct book tDataStru[4]=
     {"6.4","I Found Peace",350,0}
 };
 struct book cart[10];
+int cartItems=0;
+int totalPrice=0;
 void DisplayEClaculus();
 void DisplayEPhysics();
 void DisplayEDataStru();
 void DisplayTClaculus();
 void DisplayTPhysics();
 void DisplayTDataStru();
+void eCalculus1(char *str);
+void ePhysics1(char *str);
+void eDataStru1(char *str);
+void tCalculus1(char *str);
+void tPhysics1(char *str);
+void tDataStru1(char *str);
 int main()
 {
     int option=0;
@@ -127,4 +135,151 @@ void DisplayTDataStru(){
     for (int i=0;i<=3;i++){
         printf("%d- %s--%d \n",i+1,tDataStru[i].title,tDataStru[i].price);
     }
+}
+void eCalculus1(char *str){
+_Bool flag = 0; 
+int j=0;
+int i=0;
+while( (j<=3)){
+if ( strcmp(eCalculus[j].id,str)==0 ){
+    printf("%s   %s",str,eCalculus[j].id);
+    totalPrice+=eCalculus[j].price;
+    while (i<=cartItems){
+        if ( strcmp(cart[i].id,str)==0) {
+            flag=1;
+            ++cart[i].qty;
+            break;
+        } else i++;
+    }
+    if (flag==1)
+    break; 
+    else
+      {
+        cart[cartItems]=eCalculus[j];
+        //printf("hey  %s ",cart[cartItems].id);
+      cart[cartItems].qty++;
+      ++cartItems;
+    break;}
+} else j++;
+}
+}
+void ePhysics1(char *str){
+_Bool flag = 0; 
+int j=0;
+int i=0;
+while( (j<=3)){
+if (strcmp(ePhysics[j].id, str)==0){
+    totalPrice+=ePhysics[j].price;
+    while (i<=cartItems){
+        if (strcmp(cart[i].id,str)==0) {
+            flag=1;
+            ++cart[i].qty;
+            break;
+        } else i++;
+    }
+    if (flag==1)
+    break; 
+    else
+      {cart[cartItems]=ePhysics[j];
+      cart[cartItems].qty++;
+      ++cartItems;
+    break;}
+} else j++;
+}
+}
+void eDataStru1(char*str){
+_Bool flag = 0; 
+int j=0;
+int i=0;
+while( (j<=3)){
+if (strcmp(eDataStru[j].id, str)==0){
+    totalPrice+=eDataStru[j].price;
+    while (i<=cartItems){
+        if (strcmp(cart[i].id,str)==0) {
+            flag=1;
+            ++cart[i].qty;
+            break;
+        } else i++;
+    }
+    if (flag==1)
+    break; 
+    else
+      {cart[cartItems]=eDataStru[j];
+      cart[cartItems].qty++;
+      ++cartItems;
+    break;}
+} else j++;
+}
+}
+void tCalculus1(char *str){
+_Bool flag = 0; 
+int j=0;
+int i=0;
+while( (j<=3)){
+if (strcmp(tCalculus[j].id, str)==0){
+    totalPrice+=tCalculus[j].price;
+    while (i<=cartItems){
+        if (strcmp(cart[i].id,str)==0) {
+            flag=1;
+            ++cart[i].qty;
+            break;
+        } else i++;
+    }
+    if (flag==1)
+    break; 
+    else
+      {cart[cartItems]=tCalculus[j];
+      cart[cartItems].qty++;
+      ++cartItems;
+    break;}
+} else j++;
+}
+}
+void tPhysics1(char *str){
+_Bool flag = 0; 
+int j=0;
+int i=0;
+while( (j<=3)){
+if (strcmp(tPhysics[j].id, str)==0){
+    totalPrice+=tPhysics[j].price;
+    while (i<=cartItems){
+        if (strcmp(cart[i].id,str)==0) {
+            flag=1;
+            ++cart[i].qty;
+            break;
+        } else i++;
+    }
+    if (flag==1)
+    break; 
+    else
+      {cart[cartItems]=tPhysics[j];
+      cart[cartItems].qty++;
+      ++cartItems;
+    break;}
+} else j++;
+}
+}
+void tDataStru1(char *str){
+_Bool flag = 0; 
+int j=0;
+int i=0;
+while( (j<=3)){
+if (strcmp(tDataStru[j].id, str)==0){
+    totalPrice+=tDataStru[j].price;
+    while (i<=cartItems){ 
+        if (strcmp(cart[i].id,str)==0) {
+            flag=1;
+            ++cart[i].qty;
+            break;
+        } else i++;
+    }
+        if (flag==1)
+    break; 
+    else
+      {cart[cartItems]=tDataStru[j];
+      cart[cartItems].qty++;
+      ++cartItems;
+    break;}
+} else j++;
+}
 }
