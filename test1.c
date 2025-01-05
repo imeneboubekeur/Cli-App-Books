@@ -121,6 +121,10 @@ int main()
           break;
            }
            break;
+          case 3: 
+        printf (" %s",cart[0].title);
+        viewCart();
+        break;
      }
      }while(option!=4);
    
