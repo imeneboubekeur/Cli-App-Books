@@ -63,6 +63,35 @@ int main()
      do {printf(" Choose an option \n1-View products  \n 2-add to Cart \n 3- View My Cart \n 4- I finished Shopping\n");
      scanf("%d",&option);
      switch(option){
+         int lang;
+        case 1: printf("Chose a Language:\n 1- TURKISH \n 2-ENGLISH");
+        scanf("%d",&lang);
+          switch(lang){
+            int cat;
+           case 1: printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures");
+              scanf("%d",&cat);
+              switch(cat){
+                case 1:DisplayEClaculus();
+                break;
+                case 2:DisplayEPhysics();
+                break;
+                case 3:DisplayEDataStru();
+                break;
+              }
+              break;
+            case 2:printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures");
+              scanf("%d",&cat);
+              switch(cat){
+                case 1:DisplayTClaculus();
+                break;
+                case 2:DisplayTPhysics();
+                break;
+                case 3:DisplayTDataStru();
+                break;
+              }
+              break;
+          }
+          break;
      }
      }while(option!=4);
    
