@@ -9,24 +9,24 @@ struct book {
 
 struct book eCalculus[40]=
 {
-    {"1.1","shakespeare",200,0},
-    {"1.2","The Amazing World",180,0},
-    {"1.3","The Night of Horror!",89,0},
-    {"1.4","I Found Peace",350,0}
+    {"1.1","Essential Calculus Skills Practice Workbook",23,0},
+    {"1.2","Calculus For Dummies",18,0},
+    {"1.3","Princeton Review AP Calculus BC Premium",89,0},
+    {"1.4","Differential Equations Essential Skills PracticeI Found Peace",50,0}
 };
 struct book ePhysics[40]=
 {
-    {"2.1","shakespeare",200,0},
-    {"2.2","The Amazing World",180,0},
-    {"2.3","The Night of Horror!",89,0},
-    {"2.4","I Found Peace",350,0}
+    {"2.1","The Physics Book",200,0},
+    {"2.2","Super Simple Physics",180,0},
+    {"2.3","For the Love of Physics",89,0},
+    {"2.4","Physics: A complete introduction",350,0}
 };
 struct book eDataStru[40]=
 {
-    {"3.1","shakespeare",200,0},
-    {"3.2","The Amazing World",180,0},
-    {"3.3","The Night of Horror!",89,0},
-    {"3.4","I Found Peace",350,0}
+    {"3.1","Data Structures and Algorithms Made Easy",200,0},
+    {"3.2","Data Structures and Algorithms in Python",180,0},
+    {"3.3","Data Structures and Algorithms in Java",89,0},
+    {"3.4","Algorithms and Data Structures in Action",350,0}
 };
 struct book tCalculus[40]=
 {
