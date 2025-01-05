@@ -100,6 +100,26 @@ int main()
               break;
           }
           break;
+          case 2: printf("please Enter the  ID of the book desired to add! ");
+         char id[20];
+         scanf("%s",&id);
+           switch (id[0]){
+          case '1': 
+          eCalculus1(id);
+          break;
+          case '2':ePhysics1(id);
+          break;
+          case '3':eDataStru1(id);
+          break;
+          case '4':tCalculus1(id);
+          break;
+          case '5':tPhysics1(id);
+    
+          break;
+          case '6':tDataStru1(id);
+          break;
+           }
+           break;
      }
      }while(option!=4);
    
