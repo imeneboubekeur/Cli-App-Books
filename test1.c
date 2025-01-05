@@ -7,42 +7,42 @@ struct book {
     int qty;
 };
 
-struct book eCalculus[4]=
+struct book eCalculus[40]=
 {
     {"1.1","shakespeare",200,0},
     {"1.2","The Amazing World",180,0},
     {"1.3","The Night of Horror!",89,0},
     {"1.4","I Found Peace",350,0}
 };
-struct book ePhysics[4]=
+struct book ePhysics[40]=
 {
     {"2.1","shakespeare",200,0},
     {"2.2","The Amazing World",180,0},
     {"2.3","The Night of Horror!",89,0},
     {"2.4","I Found Peace",350,0}
 };
-struct book eDataStru[4]=
+struct book eDataStru[40]=
 {
     {"3.1","shakespeare",200,0},
     {"3.2","The Amazing World",180,0},
     {"3.3","The Night of Horror!",89,0},
     {"3.4","I Found Peace",350,0}
 };
-struct book tCalculus[4]=
+struct book tCalculus[40]=
 {
    {"4.1","shakespeare",200,0},
     {"4.2","The Amazing World",180,0},
     {"4.3","The Night of Horror!",89,0},
     {"4.4","I Found Peace",350,0}
 };
-struct book tPhysics[4]=
+struct book tPhysics[40]=
 {
     {"5.1","shakespeare",200,0},
     {"5.2","The Amazing World",180,0},
     {"5.3","The Night of Horror!",89,0},
     {"5.4","I Found Peace",350,0}
 };
-struct book tDataStru[4]=
+struct book tDataStru[40]=
 {
     {"6.1","shakespeare",200,0},
     {"6.2","The Amazing World",180,0},
@@ -52,6 +52,12 @@ struct book tDataStru[4]=
 struct book cart[10];
 int cartItems=0;
 int totalPrice=0;
+int ecalc=4;
+int ephy=4;
+int edata=4;
+int tcalc=4;
+int tphy=4;
+int tdata=4;
 void DisplayEClaculus();
 void DisplayEPhysics();
 void DisplayEDataStru();
@@ -65,19 +71,53 @@ void eDataStru1(char *str);
 void tCalculus1(char *str);
 void tPhysics1(char *str);
 void tDataStru1(char *str);
+void addeCalculus();
+void addePhysics();
+void addeData();
+void addtCalculus();
+void addetPhysics();
+void addtData();
 int main()
 {
     int option=0;
     printf("Welcome to Our E-Book App");
-     do {printf(" Choose an option \n1-View products  \n 2-add to Cart \n 3- View My Cart \n 4- I finished Shopping\n");
+     do {printf(" Choose an option: \n 0-add Books to the store \n1 -View products  \n 2-add to Cart \n 3- View My Cart \n 4- I finished Shopping\n");
      scanf("%d",&option);
      switch(option){
          int lang;
-        case 1: printf("Chose a Language:\n 1-ENGLISH \n 2-TURKISH");
+         case 0:printf("Chose a Language:\n 1- ENGLISH \n 2-TURKISH \n");
+          scanf("%d",&lang);
+          switch(lang){
+            int cat;
+           case 1: printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures \n");
+              scanf("%d",&cat);
+              switch(cat){
+                case 1:addeCalculus();
+                break;
+                case 2:addePhysics();
+                break;
+                case 3:addeData();
+                break;
+              }
+              break;
+            case 2:printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures \n");
+              scanf("%d",&cat);
+              switch(cat){
+                case 1:addtCalculus();
+                break;
+                case 2:addetPhysics();
+                break;
+                case 3:addtData();
+                break;
+              }
+              break;
+          }
+          break;
+        case 1: printf("Chose a Language:\n 1-ENGLISH \n 2-TURKISH \n");
         scanf("%d",&lang);
           switch(lang){
             int cat;
-           case 1: printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures");
+           case 1: printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures \n");
               scanf("%d",&cat);
               switch(cat){
                 case 1:DisplayEClaculus();
@@ -88,7 +128,7 @@ int main()
                 break;
               }
               break;
-            case 2:printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures");
+            case 2:printf("Chose a Category:\n 1-Calculus \n 2-Physiscs \n 3-Data Structures \n");
               scanf("%d",&cat);
               switch(cat){
                 case 1:DisplayTClaculus();
@@ -121,8 +161,7 @@ int main()
           break;
            }
            break;
-          case 3: 
-        printf (" %s",cart[0].title);
+          case 3:
         viewCart();
         break;
      }
@@ -132,40 +171,40 @@ int main()
 return 0;
 }
 void DisplayEClaculus(){
-    for (int i=0;i<=3;i++){
-        printf("%d- %s--%d \n",i+1,eCalculus[i].title,eCalculus[i].price);
+    for (int i=0;i<ecalc;i++){
+        printf("%s- %s--%d $\n",eCalculus[i].id,eCalculus[i].title,eCalculus[i].price);
     }
 }
 void DisplayEPhysics(){
-    for (int i=0;i<=3;i++){
-        printf("%d- %s--%d \n",i+1,ePhysics[i].title,ePhysics[i].price);
+    for (int i=0;i<ephy;i++){
+        printf("%s- %s--%d $\n",ePhysics[i].id,ePhysics[i].title,ePhysics[i].price);
     }
 }
 void DisplayEDataStru(){
-    for (int i=0;i<=3;i++){
-        printf("%d- %s--%d \n",i+1,eDataStru[i].title,eDataStru[i].price);
+    for (int i=0;i<edata;i++){
+        printf("%s- %s--%d $\n",eDataStru[i].id,eDataStru[i].title,eDataStru[i].price);
     }
 }
 void DisplayTClaculus(){
-    for (int i=0;i<=3;i++){
-        printf("%d- %s--%d \n",i+1,tCalculus[i].title,tCalculus[i].price);
+    for (int i=0;i<tcalc;i++){
+        printf("%s- %s--%d $\n",tCalculus[i].id,tCalculus[i].title,tCalculus[i].price);
     }
 }
 void DisplayTPhysics(){
-    for (int i=0;i<=3;i++){
-        printf("%d- %s--%d \n",i+1,tPhysics[i].title,tPhysics[i].price);
+    for (int i=0;i<tphy;i++){
+        printf("%s- %s--%d $\n",tPhysics[i].id,tPhysics[i].title,tPhysics[i].price);
     }
 }
 void DisplayTDataStru(){
-    for (int i=0;i<=3;i++){
-        printf("%d- %s--%d \n",i+1,tDataStru[i].title,tDataStru[i].price);
+    for (int i=0;i<tdata;i++){
+        printf("%s- %s--%d $\n",tDataStru[i].id,tDataStru[i].title,tDataStru[i].price);
     }
 }
 void eCalculus1(char *str){
 _Bool flag = 0; 
 int j=0;
 int i=0;
-while( (j<=3)){
+while( (j<ecalc)){
 if ( strcmp(eCalculus[j].id,str)==0 ){
     printf("%s   %s",str,eCalculus[j].id);
     totalPrice+=eCalculus[j].price;
@@ -192,7 +231,7 @@ void ePhysics1(char *str){
 _Bool flag = 0; 
 int j=0;
 int i=0;
-while( (j<=3)){
+while( (j<ephy)){
 if (strcmp(ePhysics[j].id, str)==0){
     totalPrice+=ePhysics[j].price;
     while (i<=cartItems){
@@ -216,7 +255,7 @@ void eDataStru1(char*str){
 _Bool flag = 0; 
 int j=0;
 int i=0;
-while( (j<=3)){
+while( (j<edata)){
 if (strcmp(eDataStru[j].id, str)==0){
     totalPrice+=eDataStru[j].price;
     while (i<=cartItems){
@@ -240,7 +279,7 @@ void tCalculus1(char *str){
 _Bool flag = 0; 
 int j=0;
 int i=0;
-while( (j<=3)){
+while( (j<tcalc)){
 if (strcmp(tCalculus[j].id, str)==0){
     totalPrice+=tCalculus[j].price;
     while (i<=cartItems){
@@ -264,7 +303,7 @@ void tPhysics1(char *str){
 _Bool flag = 0; 
 int j=0;
 int i=0;
-while( (j<=3)){
+while( (j<tphy)){
 if (strcmp(tPhysics[j].id, str)==0){
     totalPrice+=tPhysics[j].price;
     while (i<=cartItems){
@@ -288,7 +327,7 @@ void tDataStru1(char *str){
 _Bool flag = 0; 
 int j=0;
 int i=0;
-while( (j<=3)){
+while( (j<tdata)){
 if (strcmp(tDataStru[j].id, str)==0){
     totalPrice+=tDataStru[j].price;
     while (i<=cartItems){ 
@@ -313,4 +352,58 @@ void viewCart() {
         printf("-- title: %s, price: %d, quantity:%d\n", cart[i].title, cart[i].price,cart[i].qty);
     }
     printf(" \n TOTAL PRICE:%d",totalPrice);
+}
+void addeCalculus(){
+    printf("Enter the Price: \n");
+    scanf("%d",&eCalculus[ecalc].price);
+     printf("Enter the Title: \n");
+    scanf("%s",&eCalculus[ecalc].title);
+    strcpy(eCalculus[ecalc].id, "1.1");
+    eCalculus[ecalc].id[2]=(ecalc+1)+'0';
+    ecalc++;
+}
+void addePhysics(){
+     printf("Enter the Price:\n ");
+    scanf("%d",&ePhysics[ephy].price);
+     printf("Enter the Title:\n");
+    scanf("%s",&ePhysics[ephy].title);
+    strcpy(ePhysics[ephy].id, "2.1");
+    ePhysics[ephy].id[2]=(ephy+1)+'0';
+    ephy++;
+}
+void addeData(){
+    printf("Enter the Price:\n");
+    scanf("%d",&eDataStru[edata].price);
+     printf("Enter the Title:\n");
+    scanf("%s",&eDataStru[edata].title);
+    strcpy(eDataStru[edata].id, "3.1");
+    eDataStru[edata].id[2]=(edata+1)+'0';
+    edata++;
+}
+void addtCalculus(){
+    printf("Enter the Price:\n ");
+    scanf("%d",&tCalculus[tcalc].price);
+     printf("Enter the Title:\n");
+    scanf("%s",&tCalculus[tcalc].title);
+    strcpy(tCalculus[tcalc].id, "4.1");
+    tCalculus[tcalc].id[2]=(tcalc+1)+'0';
+    tcalc++;
+}
+void addetPhysics(){
+     printf("Enter the Price;\n ");
+    scanf("%d",&tPhysics[tphy].price);
+     printf("Enter the Title:");
+    scanf("%s",&tPhysics[tphy].title);
+    strcpy(tPhysics[tphy].id, "5.1");
+    tPhysics[tphy].id[2]=(tphy+1)+'0';
+    tphy++;
+}
+void addtData(){
+    printf("Enter the Price:\n");
+    scanf("%d",&tDataStru[tdata].price);
+     printf("Enter the Title:\n");
+    scanf("%s",&tDataStru[tdata].title);
+    strcpy(tDataStru[tdata].id, "6.1");
+    tDataStru[tdata].id[2]=(tdata+1)+'0';
+    tdata++;
 }
