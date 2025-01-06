@@ -11,7 +11,7 @@ test1.c: the source file name.
 
 Run the Application.
 
-![Capture d’écran 2025-01-05 231005](https://github.com/user-attachments/assets/3e7d2f17-3899-423b-a68f-92c709a8b852)
+![Capture d’écran 2025-01-06 235328](https://github.com/user-attachments/assets/e236891b-67dd-48c8-addf-6f8e3beae9b2)
 
 a MENU is displayed with different options to choose.
 
@@ -19,7 +19,7 @@ a MENU is displayed with different options to choose.
 
 Option '0' to add a book to the store according to its Language and Category.
 
-![Capture d’écran 2025-01-05 231553](https://github.com/user-attachments/assets/56a2c6a9-2bba-4e74-88a1-ac61247d835f)
+![Capture d’écran 2025-01-06 235401](https://github.com/user-attachments/assets/c0fa77bf-dcbb-4f4b-af2e-2cf9194c96c0)
 
 Option '1' to display the available Books according to the Language and Category.
 
