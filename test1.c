@@ -81,7 +81,7 @@ int main()
 {
     int option=0;
     printf("Welcome to Our E-Book App");
-     do {printf(" Choose an option: \n 12-PERSONAS \n 11-User Stories \n 0-Add Books to the store \n1 -View products  \n 2-Add to Cart \n 3-View My Cart \n 4-I finished Shopping\n");
+     do {printf(" Choose an option: \n 12-PERSONAS \n 11-User Stories \n 0-Add Books to the store \n1-View products  \n 2-Add to Cart \n 3-View My Cart \n 4-I finished Shopping\n");
      scanf("%d",&option);
      switch(option){
          int lang;
