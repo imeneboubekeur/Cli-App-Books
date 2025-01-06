@@ -30,24 +30,24 @@ struct book eDataStru[40]=
 };
 struct book tCalculus[40]=
 {
-   {"4.1","shakespeare",200,0},
-    {"4.2","The Amazing World",180,0},
-    {"4.3","The Night of Horror!",89,0},
-    {"4.4","I Found Peace",350,0}
+   {"4.1","Matematiğin Aydınlık Dünyası– Ali Nesin",55,0},
+    {"4.2","Matematiğin Kısa Tarihi– Ian Stewart",65,0},
+    {"4.3","Matematik ve Sonsuzluk – Amir D. Aczel",89,0},
+    {"4.4","Matematiksel Düşünme ve Problem Çözme – George Pólya",35,0}
 };
 struct book tPhysics[40]=
 {
-    {"5.1","shakespeare",200,0},
-    {"5.2","The Amazing World",180,0},
-    {"5.3","The Night of Horror!",89,0},
-    {"5.4","I Found Peace",350,0}
+    {"5.1","Fiziğin Eğlenceli Yüzü – V. Ya. Frenkel",90,0},
+    {"5.2","Feynman’ın Fizik Dersleri – Richard P. Feynman",45,0},
+    {"5.3","Feynman’ın Fizik Dersleri – Richard P. Feynman",95,0},
+    {"5.4","Einstein’ın Evreni – Michio Kaku",40,0}
 };
 struct book tDataStru[40]=
 {
-    {"6.1","shakespeare",200,0},
-    {"6.2","The Amazing World",180,0},
-    {"6.3","The Night of Horror!",89,0},
-    {"6.4","I Found Peace",350,0}
+    {"6.1","Algoritmaların Estetiği – Ali Büyükköroğlu",200,0},
+    {"6.2","Programlamaya Giriş ve Algoritmalar – Doç. Dr. Aysel Erçil",180,0},
+    {"6.3","Kodun Mantığı – Charles Petzold",89,0},
+    {"6.4","Dijital Dünyanın Temelleri – David Auerbach",350,0}
 };
 struct book cart[10];
 int cartItems=0;
@@ -81,10 +81,29 @@ int main()
 {
     int option=0;
     printf("Welcome to Our E-Book App");
-     do {printf(" Choose an option: \n 0-Add Books to the store \n1 -View products  \n 2-Add to Cart \n 3-View My Cart \n 4-I finished Shopping\n");
+     do {printf(" Choose an option: \n 12-PERSONAS \n 11-User Stories \n 0-Add Books to the store \n1 -View products  \n 2-Add to Cart \n 3-View My Cart \n 4-I finished Shopping\n");
      scanf("%d",&option);
      switch(option){
          int lang;
+         case 12:
+         printf("\n 1. Student in software Engineering \n");
+         printf("__Age:20\n");
+         printf("__Needs:Browse in all the different Books,price checking, total price checking\n");
+         printf("__Goals:Easy Books Shopping process\n");
+         printf("\n 2. Books Seller\n");
+         printf("__Age:35\n");
+         printf("__Needs:Being able to add his books\n");
+         printf("__Goals:Easy Books selling process\n");
+         break;
+         case 11:
+         printf("\n -As a Book seller I want to be able to add as many books as I want \n");
+         printf(" -As a Book Seller I want to add books of different languages Turkish and English \n");
+         printf(" -As a Student a Books seeker I want to see the Available Books\n");
+         printf(" -As a Student a Books Seeker I want to see all the books with their prices \n");
+         printf(" -As a Student a Books Seeker I want to be able to add as many books as I want to my Cart Shopping\n");
+         printf(" -As a Student a Books Seeker I want to be able to see all the items in my Cart Shopping\n");
+         printf(" -As a Student a Books Seeker I want to be able to see the total price in my cart\n");
+         break;
          case 0:printf("Chose a Language:\n 1-ENGLISH \n 2-TURKISH \n");
           scanf("%d",&lang);
           switch(lang){
