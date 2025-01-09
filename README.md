@@ -1,6 +1,8 @@
 # Cli-App-Books
 Cli App for Books
 
+
+
 ![Capture d’écran 2025-01-05 230755](https://github.com/user-attachments/assets/c2281ad9-0625-4ef2-ba1a-ed91f01457d7)
 
 -o books: specifies the output file name.
@@ -15,6 +17,15 @@ Run the Application.
 
 a MENU is displayed with different options to choose.
 
+
+![Capture d’écran 2025-01-09 201516](https://github.com/user-attachments/assets/cb262a64-048a-4e9f-912b-f4cdd358ff0c)
+
+Option '12' to display User Personas
+
+![Capture d’écran 2025-01-09 201551](https://github.com/user-attachments/assets/f698575f-76f9-40d0-a765-9cf98a794122)
+
+Option '11' to display User Stories
+
 ![Capture d’écran 2025-01-05 231352](https://github.com/user-attachments/assets/46c28733-0190-4d20-bb88-421a0b0fb15a)
 
 Option '0' to add a book to the store according to its Language and Category.
@@ -27,7 +38,7 @@ Option '1' to display the available Books according to the Language and Category
 
 Option '2' to add a Book the Cart Shopping by entering the ID.
 
-![Capture d’écran 2025-01-05 232312](https://github.com/user-attachments/assets/be4fad22-ed6f-4601-8afd-ef6b565d17b8)
+![Capture d’écran 2025-01-09 202443](https://github.com/user-attachments/assets/1dbdf287-b29c-4099-a096-599b9d14923c)
 
 Option '3' to display the Cart Items with the Total Price.
 
